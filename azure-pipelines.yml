@@ -24,5 +24,13 @@ steps:
   inputs:
     command: build
     projects: "**/*.csproj"
-
+- task: MS-RichCodeNav.Indexer.build-task.RichCodeNavIndexer@0
+  displayName: Rich Code Navigation Upload to Staging
+  inputs:
+    serviceConnection: 'richCodeNav-Token-Int'
+    languages: 'csharp'
+    githubServiceConnection: 'noellelc'
+    environment: staging
+    isPrivateFeed: false
+  continueOnError: true
 
