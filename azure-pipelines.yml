@@ -1,0 +1,31 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include: ["master", "*"]
+  paths:
+    exclude: ["*.md"]
+
+queue:
+  name: Hosted VS2017
+  timeoutInMinutes: 60
+  
+steps:
+- script: echo 'Starting build...'
+- task: UseDotNet@2
+  inputs:
+    version: '3.0.x'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: restore
+    projects: '**/*.csproj'
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    command: build
+    projects: "**/*.csproj"
+
+
