@@ -1,6 +1,6 @@
 namespace SampleApp
 {
-    class AlgorithmSolver
+    public class AlgorithmSolver
     {
         static int Add(int a, int b) 
         {
