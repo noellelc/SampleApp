@@ -8,8 +8,10 @@ namespace SampleApp
         {
             Console.WriteLine("Hello World!");
 
-            Console.WriteLine($"2 + 3 = {AlgorithmSolver.Add(2,3)}");
-            Console.WriteLine($"12 - 3 = {AlgorithmSolver.Subtract(12,3)}");
+            Calculator calc = new Calculator();
+
+            Console.WriteLine($"2 + 3 = {calc.Add(2,3)}");
+            Console.WriteLine($"12 - 3 = {calc.Subtract(12,3)}");
         }
     }
 }
