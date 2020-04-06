@@ -33,5 +33,5 @@ steps:
     environment: staging
     isPrivateFeed: false
   continueOnError: true
--script: echo Adding a final line
+- script: echo Adding a final line
 
