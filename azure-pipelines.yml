@@ -14,7 +14,7 @@ queue:
   timeoutInMinutes: 60
   
 steps:
-- script: echo 'Starting build...'
+- script: echo Starting build...
 - task: DotNetCoreCLI@2
   inputs:
     command: restore
@@ -33,4 +33,5 @@ steps:
     environment: staging
     isPrivateFeed: false
   continueOnError: true
+-script: echo Adding a final line
 
