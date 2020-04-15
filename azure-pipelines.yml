@@ -29,11 +29,11 @@ steps:
     command: build
     projects: "**/*.csproj"
 - task: MS-RichCodeNav.Indexer.build-task.RichCodeNavIndexer@0
-  displayName: Rich Code Navigation Upload to Dev
+  displayName: Rich Code Navigation Upload to Staging
   inputs:
     languages: 'csharp'
     githubServiceConnection: 'noellelc'
-    environment: development
+    environment: staging
     isPrivateFeed: false
   continueOnError: true
 - script: echo Adding a final line
