@@ -14,7 +14,11 @@ queue:
   timeoutInMinutes: 60
   
 steps:
-- script: echo Starting build...
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk'
+  inputs:
+    packageType: sdk
+    version: 2.x
 - task: DotNetCoreCLI@2
   inputs:
     command: restore
