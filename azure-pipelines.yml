@@ -28,6 +28,11 @@ steps:
   inputs:
     command: build
     projects: "**/*.csproj"
+- task: UseDotNet@2
+  displayName: 'Switch back to 2.0 Use .NET Core sdk'
+  inputs:
+    packageType: sdk
+    version: 2.x
 - task: MS-RichCodeNav.Indexer.build-task.RichCodeNavIndexer@0
   displayName: Rich Code Navigation Upload to Dev
   inputs:
