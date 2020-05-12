@@ -1,3 +1,5 @@
+using System;
+
 namespace SampleApp
 {
     public class Calculator
@@ -20,6 +22,11 @@ namespace SampleApp
         public double Divide(int a, int b)
         {
             return a/b;
+        }
+
+        public double Power(int a, int b)
+        {
+            return Math.Pow(a, b);
         }
     }
 }
