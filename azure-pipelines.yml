@@ -35,5 +35,6 @@ steps:
     githubServiceConnection: 'noellelc'
     environment: development
     nugetVersion: '0.1.1382-alpha'
+    nugetFeed: 'https://devdiv.pkgs.visualstudio.com/Personal/_packaging/richnav/nuget/v3/index.json'
     isPrivateFeed: true
   continueOnError: true
