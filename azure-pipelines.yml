@@ -10,7 +10,7 @@ trigger:
     exclude: ["*.md"]
 
 queue:
-  name: Hosted VS2017
+  name: Hosted Windows 2019 with VS2019
   timeoutInMinutes: 60
   
 steps:
@@ -18,7 +18,7 @@ steps:
   displayName: 'Use .NET Core sdk'
   inputs:
     packageType: sdk
-    version: 2.x
+    version: 3.x
 - task: DotNetCoreCLI@2
   inputs:
     command: restore
