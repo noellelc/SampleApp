@@ -10,7 +10,7 @@ trigger:
     exclude: ["*.md"]
 
 queue:
-  name: Hosted Windows 2019 with VS2019
+  name: Hosted VS2017
   timeoutInMinutes: 60
   
 steps:
@@ -35,6 +35,5 @@ steps:
     githubServiceConnection: 'noellelc'
     environment: development
     nugetVersion: '0.1.1382-alpha'
+    isPrivateFeed: true
   continueOnError: true
-- script: echo Adding a final line
-
