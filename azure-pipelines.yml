@@ -34,6 +34,7 @@ steps:
     languages: 'csharp'
     githubServiceConnection: 'noellelc'
     environment: development
+    nugetVersion: '0.1.1382-alpha'
   continueOnError: true
 - script: echo Adding a final line
 
