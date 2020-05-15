@@ -18,7 +18,7 @@ steps:
   displayName: 'Use .NET Core sdk'
   inputs:
     packageType: sdk
-    version: 2.x
+    version: 3.x
 - task: DotNetCoreCLI@2
   inputs:
     command: restore
@@ -28,13 +28,18 @@ steps:
   inputs:
     command: build
     projects: "**/*.csproj"
+- task: UseDotNet@2
+  displayName: 'Switch back to 2.0 Use .NET Core sdk'
+  inputs:
+    packageType: sdk
+    version: 2.x
 - task: MS-RichCodeNav.Indexer.build-task.RichCodeNavIndexer@0
-  displayName: Rich Code Navigation Upload to Staging
+  displayName: Rich Code Navigation Upload to Dev
   inputs:
     languages: 'csharp'
     githubServiceConnection: 'noellelc'
-    environment: staging
-    isPrivateFeed: false
+    environment: development
+    nugetVersion: '0.1.1382-alpha'
+    nugetFeed: 'https://devdiv.pkgs.visualstudio.com/Personal/_packaging/richnav/nuget/v3/index.json'
+    isPrivateFeed: true
   continueOnError: true
-- script: echo Adding a final line
-
