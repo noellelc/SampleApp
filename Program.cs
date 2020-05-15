@@ -15,6 +15,8 @@ namespace SampleApp
             Console.WriteLine($"12 * 3 = {calc.Multiply(12,3)}");
             Console.WriteLine($"12 / 3 = {calc.Divide(12,3)}");
             Console.WriteLine($"12 ^ 3 = {calc.Power(12,3)}");
+
+            // comment
         }
     }
 }
