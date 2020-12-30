@@ -1,0 +1,26 @@
+name: CI with Rich Nav
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+  # Allows you to run this workflow manually from the Actions tab
+  # workflow_dispatch:
+
+jobs:
+  richnav:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup .NET Core
+        uses: actions/setup-dotnet@v1
+      - name: Install dependencies
+        run: dotnet restore
+      - name: build with dotnet
+        run: dotnet build
+      - name: Rich Code Nav Indexer
+        uses: microsoft/RichCodeNavIndexer@v0.1
+        with:
+          languages: csharp
+          environment: development
+          repo-token:  ${{ secrets.GITHUB_TOKEN }}
