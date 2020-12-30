@@ -25,5 +25,6 @@ steps:
   inputs:
     languages: 'csharp'
     githubServiceConnection: 'noellelc'
-    environment: development
+    environment: 'development'
+    nugetFeed: 'https://pkgs.dev.azure.com/azure-public/vside/_packaging/vs-buildservices-staging@Local/nuget/v3/index.json'
   continueOnError: true
