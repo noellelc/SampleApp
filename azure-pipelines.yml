@@ -20,7 +20,7 @@ steps:
   inputs:
     command: build
     projects: "**/*.csproj"
-- task: MS-RichCodeNav.Indexer.build-task.RichCodeNavIndexer@0.1
+- task: MS-RichCodeNav.Indexer.build-task.RichCodeNavIndexer@0
   displayName: Rich Code Navigation Upload to Dev
   inputs:
     languages: 'csharp'
